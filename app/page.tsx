@@ -206,7 +206,7 @@ export default function CVGenerator() {
           {(['content', 'design'] as const).map(tab => (
             <button key={tab} onClick={() => {
               setActiveTab(tab);
-              if (isMobile) setIsMobileMenuOpen(false);
+            
             }}
               className={`flex-1 p-3.5 flex items-center justify-center gap-2 font-black text-sm transition-all duration-300 rounded-xl
                 ${activeTab === tab ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'text-slate-500 hover:bg-white/5'}`}>
