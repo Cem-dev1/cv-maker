@@ -1,5 +1,23 @@
 @import "tailwindcss";
+/* global.css - EN ÜSTE EKLEYİN */
+* {
+  /* Tailwind v4'ün modern renklerini override et */
+  --color-red-50: #fef2f2 !important;
+  --color-blue-600: #2563eb !important;
+  --color-gray-900: #111827 !important;
+  /* ... diğer renkler */
+}
 
+/* Veya daha basit: tüm oklch/lab değerlerini engelle */
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+  * {
+    /* Bu sayede oklch/lab kullanılmaz */
+    forced-color-adjust: none;
+  }
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +41,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* global.css - EN SONA EKLE */
+@media print {
+  * {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
 }
