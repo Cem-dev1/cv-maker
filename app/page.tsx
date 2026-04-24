@@ -8,7 +8,8 @@ import {
   Plus, Trash2, FileText, Layout, Camera, Mail, Phone,
   ZoomIn, ZoomOut, GraduationCap,
   Briefcase, Code, Download, RotateCcw, Star, Globe,
-  PanelLeftClose, PanelLeftOpen  // Menü için
+  PanelLeftClose, PanelLeftOpen,
+  X, Menu  // <--- Bunları ekledik
 } from 'lucide-react';
 // --- TYPES ---
 type LayoutType = 'modern' | 'timeline' | 'terminal' | 'sidebar-right' | 'classic' | 'two-column' | 'ats' | 'bauhaus';
